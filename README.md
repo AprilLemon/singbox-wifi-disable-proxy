@@ -16,6 +16,14 @@
 
 首次运行只记录当前 SSID 作为基线，之后只有发生实际切换才判断，避免启动时误停。
 
+## 部署地址（raw 链接）
+
+插件已部署到公开仓库，可直接用于插件中心的「链接安装」：
+
+- 插件源码：`https://raw.githubusercontent.com/AprilLemon/singbox-wifi-disable-proxy/main/plugin-wifi-disable-proxy.js`
+- 元数据：`https://raw.githubusercontent.com/AprilLemon/singbox-wifi-disable-proxy/main/plugin-wifi-disable-proxy.meta.json`
+- 仓库主页：https://github.com/AprilLemon/singbox-wifi-disable-proxy
+
 ## 文件说明
 
 - `plugin-wifi-disable-proxy.js`：插件源码（ESM 格式）

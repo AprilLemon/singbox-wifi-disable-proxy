@@ -10,7 +10,7 @@
     "网络"
   ],
   "type": "Http",
-  "url": "https://raw.githubusercontent.com/GUI-for-Cores/Plugin-Hub/main/plugins/Generic/plugin-wifi-disable-proxy.js",
+  "url": "https://raw.githubusercontent.com/AprilLemon/singbox-wifi-disable-proxy/main/plugin-wifi-disable-proxy.js",
   "path": "data/plugins/plugin-wifi-disable-proxy.js",
   "hash": "a0c7be4fd86393914329d3e68c7cd4346f66eaba880ec8d0e41541077fe8da72",
   "triggers": [
