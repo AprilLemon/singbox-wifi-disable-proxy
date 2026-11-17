@@ -1,0 +1,90 @@
+{
+  "id": "plugin-wifi-disable-proxy",
+  "name": "WIFI禁用代理",
+  "version": "v1.0.0",
+  "group": "Extensions",
+  "description": "当 WIFI 切换到用户配置的名称时，自动停止代理（停止内核并关闭系统代理）。",
+  "author": "",
+  "tags": [
+    "功能扩展",
+    "网络"
+  ],
+  "type": "Http",
+  "url": "https://raw.githubusercontent.com/GUI-for-Cores/Plugin-Hub/main/plugins/Generic/plugin-wifi-disable-proxy.js",
+  "path": "data/plugins/plugin-wifi-disable-proxy.js",
+  "hash": "a0c7be4fd86393914329d3e68c7cd4346f66eaba880ec8d0e41541077fe8da72",
+  "triggers": [
+    "on::manual",
+    "on::ready"
+  ],
+  "hasUI": false,
+  "menus": {
+    "启动监测": "Start",
+    "停止监测": "Stop"
+  },
+  "context": {
+    "profiles": {},
+    "subscriptions": {},
+    "rulesets": {},
+    "plugins": {},
+    "scheduledtasks": {}
+  },
+  "status": 0,
+  "configuration": [
+    {
+      "id": "ID_wifilist001",
+      "title": "需要禁用代理的 WIFI 名称",
+      "description": "填写 WIFI 的 SSID 名称，一行一个。当连接到列表中的 WIFI 时自动停止代理。",
+      "key": "WifiList",
+      "component": "InputList",
+      "value": [],
+      "options": []
+    },
+    {
+      "id": "ID_checkinterval01",
+      "title": "检测间隔（秒）",
+      "description": "每隔多少秒检测一次当前 WIFI，最小 3 秒。间隔越小越灵敏，但资源占用略高。",
+      "key": "CheckInterval",
+      "component": "Input",
+      "value": "5",
+      "options": []
+    },
+    {
+      "id": "ID_stopaction001",
+      "title": "停止代理方式",
+      "description": "检测到目标 WIFI 时要执行的停止动作。",
+      "key": "StopAction",
+      "component": "Select",
+      "value": "both",
+      "options": [
+        "同时停止内核与系统代理,both",
+        "仅停止内核,kernel",
+        "仅关闭系统代理,system"
+      ]
+    },
+    {
+      "id": "ID_matchmode001",
+      "title": "触发时机",
+      "description": "连接到列表中的 WIFI 时停止，还是从列表中的 WIFI 离开时停止。",
+      "key": "MatchMode",
+      "component": "Select",
+      "value": "connect",
+      "options": [
+        "连接到这些 WIFI 时停止,connect",
+        "离开这些 WIFI 时停止,leave"
+      ]
+    },
+    {
+      "id": "ID_notify0001",
+      "title": "停止时显示消息提示",
+      "description": "停止代理后是否弹出提示消息。",
+      "key": "Notify",
+      "component": "Switch",
+      "value": true,
+      "options": []
+    }
+  ],
+  "disabled": false,
+  "install": false,
+  "installed": false
+}
